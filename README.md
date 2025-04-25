@@ -4,8 +4,17 @@
 
 ```
 cp .envExample .env
+nano .env  # заполните значения
+chmod 600 .env
+chmod +x *.sh
+./deploy.sh
 ```
 
+
+```
+./stop.sh    # остановка
+./start.sh   # перезапуск
+```
 
 ## Transfer format
 
