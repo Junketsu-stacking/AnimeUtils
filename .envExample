@@ -1,0 +1,4 @@
+GITHUB_ORG_NAME=your-org-name
+GITHUB_USER=your-username
+GITHUB_TOKEN=ghp_yourPersonalAccessToken123
+CLONE_METHOD=https

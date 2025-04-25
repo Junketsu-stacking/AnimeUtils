@@ -1,5 +1,12 @@
 # AnimeUtils
 
+## Deploy
+
+```
+cp .envExample .env
+```
+
+
 ## Transfer format
 
 ### Format
