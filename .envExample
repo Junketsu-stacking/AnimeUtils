@@ -1,12 +1,16 @@
-GITHUB_ORG_NAME=your-org-name
-GITHUB_USER=your-username
-GITHUB_TOKEN=ghp_yourPersonalAccessToken123
-CLONE_METHOD=https
+# GitHub Access
+GITHUB_ORG=your-org-name
+GITHUB_TOKEN=ghp_yourPersonalAccessToken
 
-DB_ROOT_USERNAME=admin
-DB_ROOT_PASSWORD=password
-DB_DATABASE=dbname
-DB_EMAIL=email@mail.ru
+# Docker
+DOCKER_REGISTRY=your-registry.example.com
+COMPOSE_PROJECT_NAME=myapp
+
+# Настройки репозиториев
+FRONTEND_REPO=frontend
+BACKEND_REPO=backend
+BUSINESS_LOGIC_REPO=ShikiApiMicroservice
+BRANCH=production
 
 DATABASE_URL=postgresql+psycopg2://admin:password@postgres:5432/dbname
 
@@ -19,3 +23,35 @@ CLIENT_ORIGIN=http://localhost:3000
 SECRET_KEY= 02
 
 SHIKIMORI_SERVICE_API = http://localhost:5555/api/v1
+
+
+# Общие настройки
+COMPOSE_PROJECT_NAME=myapp
+DOCKER_REGISTRY=registry.example.com
+NODE_ENV=production
+
+# Версии образов
+FRONTEND_TAG=v1.2.0
+BACKEND_TAG=latest
+BUSINESS_LOGIC_TAG=stable
+
+# Параметры сервисов
+FRONTEND_PORT=3000
+BACKEND_PORT=8000
+BUSINESS_LOGIC_PORT=5000
+UVICORN_WORKERS=4
+
+# Настройки БД
+DB_DATABASE=app_db
+DB_ROOT_USERNAME=app_user
+DB_ROOT_PASSWORD=secure_password
+DB_PORT=5432
+PGADMIN_EMAIL=admin@example.com
+PGADMIN_PASSWORD=admin123
+PGADMIN_PORT=5050
+
+# Redis
+REDIS_PORT=6379
+
+# Пути к volumes
+VOLUME_PATH=/mnt/data
