@@ -13,4 +13,4 @@ CLIENT_ORIGIN=http://localhost:3000
 
 SECRET_KEY= 02
 
-SHIKIMORI_SERVICE_API = http://localhost:5555/api/v1
+SHIKIMORI_SERVICE_API = http://localhost:5000/api/v1

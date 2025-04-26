@@ -113,23 +113,20 @@ services:
           cpus: '0.5'
           memory: 1G
 
-  nginx:
-    image: nginx:alpine
-    container_name: nginx
-    ports:
-      - "80:80"
-      - "443:443"
+  shikimori:
+    image: shikimori_api
+    build:
+      context: ./shikimori
+      dockerfile: Dockerfile
+    env_file:
+      - ./.env
+    environment:
+      - DATABASE_URI=sqlite:////db/shikimori_api.db
     volumes:
-      - ./frontend/nginx.conf:/etc/nginx/conf.d/default.conf
-      - ./frontend/build:/usr/share/nginx/html
-    depends_on:
-      - frontend
-      - backend
-    deploy:
-      resources:
-        limits:
-          cpus: '0.5'
-          memory: 512M
+      - ./shikimori_api:/code/shikimori_api
+      - ./db/:/db/
+    ports:
+      - "5000:5000"
 
 networks:
   default:
