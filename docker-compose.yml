@@ -100,16 +100,18 @@ services:
     ports:
       - "5000:5000"
   nginx:
-    image: nginx:latest
+    image: nginx:alpine
+    container_name: nginx
     ports:
-      - 8080:8080
-      - 443:443
+      - "80:80"
+      - "443:443"
     volumes:
-      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./certs:/etc/nginx/certs
     depends_on:
-      - web
-      - bot
-
+      - backend
+      - frontend
+    restart: unless-stopped
 networks:
   default:
     name: junketsu
