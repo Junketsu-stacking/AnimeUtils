@@ -22,33 +22,36 @@ AnimeUtils позволяет:
 
 ## 🛠️ Используемые технологии
 
-| Технология        | Назначение                  | Бейдж |
-|------------------|-----------------------------|--------|
-| Python           | Микросервисы, логика        | ![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white) |
-| FastAPI / Flask  | REST API                    | ![FastAPI](https://img.shields.io/badge/-FastAPI-009688?logo=fastapi&logoColor=white) |
-| TypeScript       | Клиентские скрипты          | ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white) |
-| React            | SPA фронтенд                | ![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=black) |
-| PostgreSQL       | Основная база данных        | ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?logo=postgresql&logoColor=white) |
-| Redis            | Кеш и очереди               | ![Redis](https://img.shields.io/badge/-Redis-DC382D?logo=redis&logoColor=white) |
-| Kafka            | Асинхронное взаимодействие  | ![Kafka](https://img.shields.io/badge/-Kafka-231F20?logo=apache-kafka&logoColor=white) |
-| Nginx            | Прокси-сервер               | ![Nginx](https://img.shields.io/badge/-Nginx-009639?logo=nginx&logoColor=white) |
-| OAuth 2.0        | Авторизация                 | ![OAuth](https://img.shields.io/badge/-OAuth2-4A90E2?logo=oauth&logoColor=white) |
+| Технология                                                                          | Применение                                                    |
+|-------------------------------------------------------------------------------------|---------------------------------------------------------------|
+| ![](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white)        | Язык программирования для микросервисов и обработки данных    |
+| ![](https://img.shields.io/badge/-FastAPI-009688?logo=fastapi&logoColor=white)      | Основной REST API фреймворк                                   |
+| ![](https://img.shields.io/badge/-Flask-000000?logo=flask&logoColor=white)          | Дополнительные вспомогательные сервисы                        |
+| ![](https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white) | Типизированный язык для клиентской и служебной логики         |
+| ![](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=black)          | Фронтенд-интерфейс (SPA)                                      |
+| ![](https://img.shields.io/badge/-PostgreSQL-336791?logo=postgresql&logoColor=white) | Основная реляционная база данных                              |
+| ![](https://img.shields.io/badge/-Redis-DC382D?logo=redis&logoColor=white)          | Хранилище кеша и вспомогательных структур                     |
+| ![](https://img.shields.io/badge/-Kafka-231F20?logo=apache-kafka&logoColor=white)   | Очереди сообщений и микросервисное взаимодействие             |
+| ![](https://img.shields.io/badge/-Nginx-009639?logo=nginx&logoColor=white)          | Веб-сервер и обратный прокси                                  |
+| ![](https://img.shields.io/badge/-OAuth2-4A90E2?logo=oauth&logoColor=white)         | Авторизация через внешние платформы (Shikimori, AniList, Remanga) |
+| ![](https://img.shields.io/badge/-MongoDB-47A248?logo=mongodb&logoColor=white)      | Локальное хранилище списка манги и аниме                      |
+| ![](https://img.shields.io/badge/-C%23-239120?logo=c-sharp&logoColor=white)       | Язык программирования для микросервисов и обработки данных                                                              |
 
 ---
 
 ## 🧩 Сервисы
 
-| Сервис | Стек | Описание | Документация |
-|--------|------|----------|---------------|
-| **Frontend** | React, TypeScript | UI-интерфейс пользователя | [Docs](https://github.com/Junketsu-stacking/WebSiteFrontend) |
-| **Backend API** | FastAPI, Kafka, PostgreSQL | Центральный API шлюз и точка маршрутизации | <!-- TODO: docs link --> |
-| **Shikimori API Service** | FastAPI, OAuth | Интеграция и импорт/экспорт из Shikimori | <!-- TODO --> |
-| **AniList API Service** | FastAPI, GraphQL | Интеграция с AniList (GraphQL) | <!-- TODO --> |
-| **Remanga API Service** | FastAPI | Работа с мангой: главы, истории | <!-- TODO --> |
-| **MAL API Service** | FastAPI (в планах) | Поддержка MyAnimeList | *Coming soon* |
-| **Access Controller** | FastAPI, JWT | Генерация и валидация токенов | <!-- TODO --> |
-| **Anime Syncer** | Kafka, Redis | Асинхронная синхронизация данных | <!-- TODO --> |
-| **Remanga Job** | Python, Cron | Периодическое обновление данных | <!-- TODO --> |
+| Сервис | Стек                          | Описание                 | Документация |
+|--------|-------------------------------|--------------------------|--|
+| **Frontend** | React, TypeScript             | UI-интерфейс пользователя | [Docs](https://github.com/Junketsu-stacking/WebSiteFrontend) |
+| **Backend API** | FastAPI, Kafka, PostgreSQL    | Работа с пользователем в нашей системе | <!-- TODO: docs link --> |
+| **Shikimori API Service** | Flask, OAuth, GraphQL         | Интеграция и импорт/экспорт из Shikimori | <!-- TODO --> |
+| **AniList API Service** | DotNet, GraphQL               | Интеграция с AniList (GraphQL) | <!-- TODO --> |
+| **Remanga API Service** | TypeScript, NodeJS            | Работа с мангой: главы, истории | <!-- TODO --> |
+| **MAL API Service** | DotNet                        | Поддержка MyAnimeList    | <!-- TODO --> |
+| **Access Controller** | TypeScript, NodeJS, Redis     | Генерация и валидация токенов | <!-- TODO --> |
+| **Anime Syncer** | Kafka, Redis, TypeScript, NodeJS | Асинхронная синхронизация данных | <!-- TODO --> |
+| **Remanga Job** | TypeScript, NodeJS, Cron, Redis, MongoDB | Джобы на прочтения манги | <!-- TODO --> |
 
 ---
 
@@ -98,14 +101,15 @@ AnimeUtils позволяет:
 
 ## 🛣️ Дорожная карта
 
-| Фича                          | Статус        |
-|------------------------------|---------------|
-| Поддержка MAL                | ⏳ В планах    |
-| Telegram-бот                 | 🧪 В разработке |
-| Админка и модерация          | 🚧 В разработке |
-| UI-фильтры и тёмная тема     | ✅ Готово      |
-| CI/CD + Docker сборка        | ✅ Готово      |
-| Поддержка GraphQL            | ✅ Готово      |
+| Фича                     | Статус        |
+|--------------------------|---------------|
+| Поддержка MAL            | ⏳ В планах    |
+| Telegram-бот             | ⏳ В планах |
+| Админка и модерация      | ⏳ В планах |
+| UI-фильтры и тёмная тема | ⏳ В планах      |
+| CI/CD + Docker сборка    | 🚧 В разработке      |
+| Поддержка AniList        | ⏳ В планах      |
+
 
 ---
 
